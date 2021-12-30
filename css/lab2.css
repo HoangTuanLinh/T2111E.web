@@ -1,0 +1,19 @@
+.heading{
+    text-align: right;
+}
+
+div {
+    width: 1200px;
+    text-indent: 80px;
+}
+h4{
+    color: hsl(340deg 43% 35%);
+}
+
+li{
+    list-style: none;
+}
+.Education{
+    border-bottom: 3px solid #DAA520;
+
+}
