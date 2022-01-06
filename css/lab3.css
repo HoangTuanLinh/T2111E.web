@@ -1,0 +1,59 @@
+h1{
+
+}
+.heading1{
+    background-color: #b8c1ca;
+    text-align: center;
+    height: 100px;
+}
+#body{
+    background-color: #EEEEEE;
+}
+.right{
+    width: 520px;
+    height: 650px;
+    float: right;
+    background-color: #EEEEEE;
+    padding: 30px;
+    text-align: justify;
+}
+#page{
+    margin:50px 200px 0 200px;
+    background-color: #EEEEEE;
+}
+body{
+    background-color:cyan;
+    color: #242424;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+#daidien{
+    max-width: 100%;
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 100%;
+}
+.border{
+    border-bottom:1px solid black;
+}
+.left{
+    background-color:#e6e6e6;
+    width: 200px;
+    height: 800px;
+    margin-left: 50px;
+    margin-top: -80px;
+    padding: 10px;
+    list-style: none;
+}
+.anh{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.li{
+    list-style: none;
+}
+
