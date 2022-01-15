@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS</title>
+</head>
+<body>
+<script type="text/javascript" src="js/demo.js">
+
+</script>
+<script type="text/javascript">
+    var x;
+    x = 10;
+    x = "hello";
+    console.log(x);
+    var y = 20;
+    if(y > 10){
+        console.log(y);
+    }else{
+        console.log(y+10);
+    }
+    switch (y){
+        case 20: console.log("case 20");
+    }
+    for(var i=0;i<y;i++){
+        console.log("i= "+1);
+    }
+    var arr = [];// khai bao arr la 1 mang ==> kich thuoc vo han - kiểu dữ liệu của mỗi phần tử cũng không cố định
+    arr[0]= 12;
+    arr[1]= "hello";
+    arr[2] = [1,2,3,4];
+    arr[3]=5;
+    for(var i=0; i<4;  i++){
+        console.log(arr[1]);
+    }
+    var s = 4000;
+    var tk = [];
+    for(var i=0; s< 1000000; i++){
+        s+= s*8/100;
+        tk[i]=s;
+    }
+    for(var i=0;i<tk.length; i++){
+        console.log(tk[i]);
+    }
+    var s1="abc", s2="abb";
+    if(s1>s2){
+        console.log("A");
+    }else{
+        console.log("B");
+    }
+    var strs = ["xin chao", "hello", "world", "abc","xyz"];
+    // for(var i=0;i<strs.length-1;i++){
+    //     for(var j=0; j<strs.length-i-1;j++){
+    //         if(strs[j] > strs[j+1]){
+    //             var demo= strs[j];
+    //             strs[j]=strs[j+1];
+    //             strs[j+1] = demo;
+    //         }
+    //     }
+    // }
+    strs.sort();// sắp xếp theo string
+    for(var i=0; i<strs.length;i++){
+        console.log(strs[i]);
+    }
+    function  tinhtong(a,b){
+        return a+b;
+    }
+    function InKetQua(a,b){
+        console.log(a+b);
+    }
+    var z=tinhtong(4,5);
+    var k=tinhtong("hello",4); // truyền vào gì xũng được tính đươc thì tính không thì báo lỗi
+    InKetQua(4,5);
+    var d= function (){ //hàm ẩn danh
+        console.log("xin chao cac ban");
+    }
+    d();
+    var e = ()=>{// khai bao ham theo kieu arrow function
+        console.log("EEEE");
+    }
+    e();
+
+    // alert("Cấm trẻ em dưới 18 tuổi"); // Tạo 1 cảnh báo - void
+    // var b= confirm("Bạn có chắc chắn lấy cô này làm vợ")// Tạo 1 sự xác nhận  - bôilean(true/false)
+    // console.log(b);
+    // var c = prompt("Vui lòng nhập tên"); //Tạo 1 ô nhập giá trị - string
+    // console.log(c); // c luôn là string
+    // // if(c != null || c!= ""){
+    // //     alert("Xin chao"+c);
+    // }
+    // do{
+    //     var c = prompt("Nhập vào tên của bạn");
+    //
+    // }while(c == null || c =="");
+    // kể cả nhập 123 thì vẫn là string
+    // do {
+    //     c = parseInt(c);
+    //     console.log(c);
+    // }while ( c== null || c=="" || c==NaN);
+    /*
+        "123 => 123"
+        "12a" => 12
+        "a12" => Nan : Not a number
+     */
+    // nguời dùng nhập số từ 1 đến 99
+    // do{
+    //     var m = prompt("Nhập số");
+    //     m = parseInt(m);
+    // }while(m <0 || m>99 || isNaN(m));
+    //  setTimeout(function (){
+    //      alert("Cảnh báo");
+    //  },5000)
+    // var count = 0;
+    // var it = setInterval(function (){
+    //     alert("Cảnh báo");
+    //     count++;
+    //     if(count >=2){
+    //         clearInterval(it); // xoá bỏ interval
+    //     }
+    // },5000) //Cứ 5s lại hiện lại 1 lần
+
+    // Làm 1 đồng hồ đếm ngược 10p
+    // var min =10, sec = 0;
+    // var clock = setInterval(function () {
+    //     // Toán tử 3 ngôi
+    //     var m_text = min < 10 ? ("0" + min) : min;
+    //     var sec_text = sec < 10 ? "0" + sec : sec;
+        // var m_text = min;
+        // if(min<10){
+        //     m_text = "0"+min;
+        // }
+        // var sec_text = sec;
+        // if(sec<10){
+        //     sec_text ="0"+sec;
+        // }
+        //     console.log(m_text+":"+sec_text);
+        //     sec--;
+        //     if(sec<0){
+        //         sec=59;
+        //         min--;
+        //     }
+        //     if(min<0){
+        //         clearInterval(clock);
+        //     }
+        // },1000)
+
+        // Nhập 1 số từ 0 ->99, sau đó tạo ngẫu nhiên 1 sô 1 đến 99. Kiểm tra số mình lựa chọn có phải số ngẫu nhiên không
+    var r = Math.random(); // 1 số ngẫu nhiên từ 0 -> 1 (r>0 && r<1)
+    r = r*100;
+    r = parseInt(r)
+    console.log(r);
+        do {
+            var m = prompt("Nhập số");
+            m = parseInt(m);
+        } while (m < 0 || m > 99 || isNaN(m));
+        // so nhau nhiên
+
+        if (m == r) {
+            alert("Chúc mừng bạn");
+        } else {
+            alert("Chúc bạn may mắn lần sau");
+        }
+
+
+
+</script>
+
+</body>
+</html>
