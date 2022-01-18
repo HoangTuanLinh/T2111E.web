@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS1</title>
+</head>
+<body>
+/<script type="text/javascript">
+    var a = Math.random();
+    a = a*100;
+    a = parseInt(a);
+    console.log(a);
+    var c=[];
+    for(var i=0; i<5; i++){
+         var b = prompt("Nhập số");
+        b = parseInt(b);
+        var demo =0;
+        for (var j=0; j<i-1;j++){
+            if (c[j]==b[j]){
+                demo=1;
+            }
+        }
+        if (demo==1){
+            i--;
+        }else
+        c[i]=b;
+    }
+    var pomt = 0;
+    for (var i=0;i<5;i++) {
+        if (a == c[i]) {
+            pomt++;
+        }
+    }
+    if (pomt==0) alert("Chúc bạn may mắn lần sau");
+    else alert("Chúc mừng bạn ");
+
+</script>
+
+</body>
+</html>
