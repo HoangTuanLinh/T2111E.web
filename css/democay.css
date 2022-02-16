@@ -20,7 +20,7 @@ img{
     width: 100%;
 }
 .container{
-    width: 1400px;
+    width: 1350px;
     margin-right: auto;
     margin-left: auto;
     float: none;
@@ -92,7 +92,7 @@ a:hover{
     width: 150px;
     height: 40px;
 }
-.main{
+.main1{
     float: left;
     width: 100%;
     background-image: url("../web/imgs/Mask Group 7.png");
