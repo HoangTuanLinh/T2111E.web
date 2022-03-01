@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab JS</title>
+    <link rel="stylesheet" href="vendors/bootstrap%203.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="css/lab_js.css">
+</head>
+<body>
+<div class="product">
+    <div class="content">
+        <div class="left">
+            <h2>* featured products</h2>
+            <select class="right">
+                <option value="Burger">Burger</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Rice">Rice</option>
+                <option value="Drinks">Drinks</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+        </div>
+        <div class="col-md-12">
+            <div class="item">
+                <ul class="item-box" id="clothes">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    $.ajax({
+        url:"https://foodgroup.herokuapp.com/api/category/1",
+        method:"get",
+        success:function (rs) {
+            var date = rs.data;
+            for (var i = 0; i < date.foods.length; i++) {
+                var img = date.foods[i].image;
+                var name = date.foods[i].name;
+                var dsc = date.foods[i].description;
+                var prc = date.foods[i].price;
+                var h_html = "<li class=\"col-md-3\">\n" +
+                    "                    <div class=\"item1\">\n" +
+                    "                        <img src=\""+img+"\">\n" +
+                    "                        <h2><b>"+ name + "</b></h2>\n" +
+                    "                        <p>" + dsc + "</p>\n" +
+                    "                        <h2 class='mn'><b>$" + prc + "</b></h2>\n" +
+                    "                        <h3>product details</h3>\n" +
+                    "                    </div>\n" +
+                    "                </li>";
+                $("#clothes").append(h_html);
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

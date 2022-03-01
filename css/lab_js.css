@@ -1,0 +1,42 @@
+body{
+    background-size: cover;
+}
+li{
+    list-style: none;
+    text-align: center;
+}
+.product{
+    width: 1200px;
+}
+.item1{
+    width: 100%;
+    box-shadow:0 0 5px #aaaaaa;
+    margin-bottom:30px ;
+    height: 400px;
+}
+.item{
+    float: left;
+    width: 100%;
+}
+.item h3{
+    background-color: #242424;
+    color: #EEEEEE;
+    height: 40px;
+    padding-top: 5px;
+    position: absolute;
+    bottom: 20px;
+    width: 252.5px;
+}
+.item p{
+    padding: 30px;
+}
+.item h2{
+    font-size: 20px;
+}
+.right{
+    position: absolute;
+    right: 50px;
+    top: 30px;
+}
+
+
